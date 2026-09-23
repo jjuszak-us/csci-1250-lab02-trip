@@ -22,7 +22,7 @@ double FuelCost = gallonsNeeded * priceOfGasPerGallon;
 
 Console.WriteLine("Gallons needed:" + gallonsNeeded.ToString("F2"));
 Console.WriteLine("Fuel Cost:" + FuelCost.ToString("C"));
-*/
+
 //A calculator for the price of pizza per person for the trip
 
 Console.WriteLine("How many people are going?");
@@ -45,6 +45,29 @@ double pizzaCost = pizzas * priceOfPizza;
 Console.WriteLine("Total Slices:" + slicesProvided);
 Console.WriteLine("Slices Per Person:" + slicesPerPerson.ToString("F1"));
 Console.WriteLine("Pizza Cost:" + pizzaCost.ToString("C"));
+*/
+
+//A calculator for your paycheck
+
+Console.WriteLine("How many hours did you work this week?");
+double hoursWorked = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("What is your hourly rate?");
+double hourlyRate = Convert.ToDouble(Console.ReadLine());
+
+const double TAX_RATE = 0.18;
+
+double grossPay = hoursWorked * hourlyRate;
+
+double taxWithheldd= grossPay * TAX_RATE;
+
+double takeHomePay = grossPay - taxWithheldd;
+
+Console.WriteLine("Your gross pay is " + grossPay.ToString("C"));
+Console.WriteLine("Your tax withheld is " + taxWithheldd.ToString("C"));
+Console.WriteLine("Your take home pay is " + takeHomePay.ToString("C"));
+
+
 
 
 
