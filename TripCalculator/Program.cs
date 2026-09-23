@@ -6,7 +6,7 @@
 *Description: A calculator for a trip with friends
 */
 
-
+/*
 Console.WriteLine("How many miles is the destination? ");
 double destinationMileage = Convert.ToDouble(Console.ReadLine ());
 
@@ -22,6 +22,30 @@ double FuelCost = gallonsNeeded * priceOfGasPerGallon;
 
 Console.WriteLine("Gallons needed:" + gallonsNeeded.ToString("F2"));
 Console.WriteLine("Fuel Cost:" + FuelCost.ToString("C"));
+*/
+//A calculator for the price of pizza per person for the trip
+
+Console.WriteLine("How many people are going?");
+double peopleGoing = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("How many pizzas are you ordering?");
+double pizzas = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("What is the price of a pizza?");
+double priceOfPizza = Convert.ToDouble(Console.ReadLine());
+
+const double SLICES_PER_PIZZA = 8.0;
+
+double slicesProvided = pizzas* SLICES_PER_PIZZA;
+
+double slicesPerPerson = slicesProvided/ peopleGoing;
+
+double pizzaCost = pizzas * priceOfPizza;
+
+Console.WriteLine("Total Slices:" + slicesProvided);
+Console.WriteLine("Slices Per Person:" + slicesPerPerson.ToString("F1"));
+Console.WriteLine("Pizza Cost:" + pizzaCost.ToString("C"));
+
 
 
 
