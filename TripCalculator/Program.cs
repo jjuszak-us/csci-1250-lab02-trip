@@ -6,7 +6,7 @@
 *Description: A calculator for a trip with friends
 */
 
-/*
+
 Console.WriteLine("How many miles is the destination? ");
 double destinationMileage = Convert.ToDouble(Console.ReadLine ());
 
@@ -45,7 +45,7 @@ double pizzaCost = pizzas * priceOfPizza;
 Console.WriteLine("Total Slices:" + slicesProvided);
 Console.WriteLine("Slices Per Person:" + slicesPerPerson.ToString("F1"));
 Console.WriteLine("Pizza Cost:" + pizzaCost.ToString("C"));
-*/
+
 
 //A calculator for your paycheck
 
@@ -66,6 +66,24 @@ double takeHomePay = grossPay - taxWithheldd;
 Console.WriteLine("Your gross pay is " + grossPay.ToString("C"));
 Console.WriteLine("Your tax withheld is " + taxWithheldd.ToString("C"));
 Console.WriteLine("Your take home pay is " + takeHomePay.ToString("C"));
+
+
+
+//A calculator for the total cost of your trip
+
+double tripTotal = FuelCost + pizzaCost;
+
+double costPerPerson = tripTotal / peopleGoing;
+
+double takeHomePayPerHour = takeHomePay / hoursWorked;
+
+double hoursYouMustWork = costPerPerson / takeHomePayPerHour;
+
+Console.WriteLine("Total Trip Cost: " + tripTotal.ToString("C"));
+Console.WriteLine("Cost per person: " + costPerPerson.ToString("C"));
+Console.WriteLine("Take home pay per hour " + takeHomePayPerHour.ToString("C"));
+Console.WriteLine("Hours you must work to attend trip " +hoursYouMustWork );
+
 
 
 
