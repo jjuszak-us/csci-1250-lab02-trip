@@ -8,6 +8,9 @@
 
 //A calculator for the cost of fuel for the trip
 
+using System.ComponentModel;
+using System.Formats.Asn1;
+
 Console.WriteLine("===== Part 1 ======");
 Console.WriteLine("");
 
@@ -22,11 +25,11 @@ double priceOfGasPerGallon = Convert.ToDouble(Console.ReadLine());
 
 double gallonsNeeded = (destinationMileage) / milesPerGallon;
 
-double FuelCost = gallonsNeeded * priceOfGasPerGallon;
+double fuelCost = gallonsNeeded * priceOfGasPerGallon;
 
 Console.WriteLine("Gallons needed:" + gallonsNeeded.ToString("F2"));
 
-Console.WriteLine("Fuel Cost:" + FuelCost.ToString("C"));
+Console.WriteLine("Fuel Cost:" + fuelCost.ToString("C"));
 
 //A calculator for the price of pizza per person for the trip
 Console.WriteLine("");
@@ -86,7 +89,7 @@ Console.WriteLine("===== Part 4 =====");
 Console.WriteLine("");
 //A calculator for the total cost of your trip
 
-double tripTotal = FuelCost + pizzaCost;
+double tripTotal = fuelCost + pizzaCost;
 
 double costPerPerson = tripTotal / peopleGoing;
 
@@ -101,6 +104,23 @@ Console.WriteLine("Cost per person: " + costPerPerson.ToString("C"));
 Console.WriteLine("Take home pay per hour " + takeHomePayPerHour.ToString("C"));
 
 Console.WriteLine("Hours you must work to attend trip " +hoursYouMustWork.ToString("F2") );
+Console.WriteLine("");
+
+//For Funsies
+Console.WriteLine("===== Part 5 =====");
+Console.WriteLine("");
+
+double totalCostPerMile = tripTotal / destinationMileage;
+double costPerMileGasOnly = fuelCost / destinationMileage;
+
+Console.WriteLine("Cost of Trip per Mile Excluding Pizza " + costPerMileGasOnly.ToString("C"));
+Console.WriteLine("Total Cost per Mile Pizza Included: " + totalCostPerMile.ToString("C"));
+
+
+
+
+
+
 
 
 
