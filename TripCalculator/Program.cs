@@ -11,7 +11,7 @@
 Console.WriteLine("===== Part 1 ======");
 Console.WriteLine("");
 
-Console.WriteLine("How many miles is the destination? ");
+Console.WriteLine("How many miles are you traveling round trip? ");
 double destinationMileage = Convert.ToDouble(Console.ReadLine ());
 
 Console.WriteLine("How many miles per gallon does your car use? ");
@@ -20,7 +20,7 @@ double milesPerGallon = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("What is the price of gas per gallon? ");
 double priceOfGasPerGallon = Convert.ToDouble(Console.ReadLine());
 
-double gallonsNeeded = (destinationMileage * 2) / milesPerGallon;
+double gallonsNeeded = (destinationMileage) / milesPerGallon;
 
 double FuelCost = gallonsNeeded * priceOfGasPerGallon;
 
